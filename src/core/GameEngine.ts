@@ -3,7 +3,7 @@
  * This is the main entry point for game logic
  */
 
-import { GameState, Choice, Character, Chapter } from './types.js';
+import { GameState, Choice, Character, Chapter, Trait } from './types.js';
 import { CharacterManager } from './CharacterManager.js';
 import { NeedsManager } from './NeedsManager.js';
 import { RelationshipManager } from './RelationshipManager.js';
@@ -45,7 +45,7 @@ export class GameEngine {
   /**
    * Initialize game with content
    */
-  initialize(characters: Character[], chapters: Chapter[], playerTraits: string[]): void {
+  initialize(characters: Character[], chapters: Chapter[], playerTraits: Trait[]): void {
     // Add characters
     characters.forEach(char => this.characterManager.addCharacter(char));
 
@@ -59,7 +59,7 @@ export class GameEngine {
     });
 
     // Set player traits
-    this.gameState.playerTraits = playerTraits as any[];
+    this.gameState.playerTraits = playerTraits;
   }
 
   /**

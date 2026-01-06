@@ -7,9 +7,10 @@ import { GameEngine } from './core/GameEngine.js';
 import { UIManager } from './ui/UIManager.js';
 import { characters } from './content/characters.js';
 import { chapters } from './content/chapters.js';
+import { Trait } from './core/types.js';
 
 // Player starts with some basic traits - can be customized
-const playerTraits = ['empathetic', 'creative'];
+const playerTraits: Trait[] = ['empathetic', 'creative'];
 
 // Initialize game
 const engine = new GameEngine();
