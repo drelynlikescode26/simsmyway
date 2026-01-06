@@ -1,0 +1,26 @@
+{
+  "name": "simsmyway",
+  "version": "1.0.0",
+  "description": "A focused life-sim game inspired by The Sims, emphasizing story, emotions, and player decisions",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "npm run build && npx http-server -p 8080 -o",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "game",
+    "life-sim",
+    "interactive-fiction",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "http-server": "^14.1.1",
+    "typescript": "^5.9.3"
+  }
+}
